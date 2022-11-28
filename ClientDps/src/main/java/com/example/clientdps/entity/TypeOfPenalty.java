@@ -1,24 +1,28 @@
 package com.example.clientdps.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.*;
 
-@Data
+
 @Entity
-@ToString
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "typeOfFines")
+@Table(name = "typeOfPenalty")
 
-public class TypeOfFines {
+public class TypeOfPenalty {
     @Id
     @GeneratedValue( strategy = GenerationType.IDENTITY)
     @Column (name = "fines_id")
     private Long id;
+
+    @Column (name = "typeOfPenalty")
+    private String typeOfPenalty;
+
+    @Column (name="fineAmount")
+    private int fineAmount;
 
 
 
