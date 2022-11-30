@@ -1,15 +1,13 @@
 package com.example.clientdps.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDate;
 
-@Data
 @Entity
+@Getter
+@Setter
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
@@ -19,13 +17,13 @@ public class Violator {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name= "id")
-    private int id;
+    private Long id;
 
-    @Column (name = "dateOfViolation")
+    @Column (name = "date_of_violation")
     private LocalDate dateOfViolation;
 
-    @Column (name = "numberOfTheCar")
-    private int numberOfTheCar;
+    @Column (name = "number_of_the_car")
+    private String numberOfTheCar;
 
     @ManyToOne(cascade=CascadeType.ALL)
     @JoinColumn (name = "fines_id")

@@ -10,7 +10,7 @@ import javax.persistence.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "typeOfPenalty")
+@Table(name = "type_of_penalty")
 
 public class TypeOfPenalty {
     @Id
@@ -18,10 +18,10 @@ public class TypeOfPenalty {
     @Column (name = "fines_id")
     private Long id;
 
-    @Column (name = "typeOfPenalty")
+    @Column (name = "type_Of_penalty")
     private String typeOfPenalty;
 
-    @Column (name="fineAmount")
+    @Column (name="fine_amount")
     private int fineAmount;
 
 
