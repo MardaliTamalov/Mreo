@@ -19,7 +19,7 @@ public class Hijacking {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column (name = "hijacking_id")
-    private Long id;
+    private Long hijackingId;
 
     @Column (name = "date_penalty")
     private LocalDate datePenalty;

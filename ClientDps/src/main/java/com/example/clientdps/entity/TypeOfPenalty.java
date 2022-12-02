@@ -15,10 +15,10 @@ import javax.persistence.*;
 public class TypeOfPenalty {
     @Id
     @GeneratedValue( strategy = GenerationType.IDENTITY)
-    @Column (name = "fines_id")
-    private Long id;
+    @Column (name = "type_of_penalty_id")
+    private Long typeOfPenaltyId;
 
-    @Column (name = "type_Of_penalty")
+    @Column (name = "type_of_penalty")
     private String typeOfPenalty;
 
     @Column (name="fine_amount")

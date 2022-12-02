@@ -16,17 +16,17 @@ import java.time.LocalDate;
 public class Violator {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name= "id")
+    @Column(name= "violator_id")
     private Long id;
 
-    @Column (name = "date_of_violation")
+    @Column (name = "date_of_violator")
     private LocalDate dateOfViolation;
 
     @Column (name = "number_of_the_car")
     private String numberOfTheCar;
 
     @ManyToOne(cascade=CascadeType.ALL)
-    @JoinColumn (name = "fines_id")
+    @JoinColumn (name = "type_of_penalty_id")
     private TypeOfPenalty typeOfPenalty;
 
 }
